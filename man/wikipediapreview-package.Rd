@@ -8,6 +8,14 @@
 \description{
 Facilitates the use of Wikipedia Preview <https://www.mediawiki.org/wiki/Wikipedia_Preview> in R Markdown documents and websites for showing a popup card with a short summary from Wikipedia when a reader hovers over a link to a Wikipedia article (on a desktop) or taps a link (on a mobile device).
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/bearloga/wikipediapreview-r}
+  \item Report bugs at \url{https://github.com/bearloga/wikipediapreview-r/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Mikhail Popov \email{mikhail@wikimedia.org}
 

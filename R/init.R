@@ -1,13 +1,13 @@
 .onAttach <- function(libname, pkgname) {
     packageStartupMessage("To initialize Wikipedia Preview include the following
-    inline code anywhere in your document:
-    `r wikipediapreview::wp_init()`
+inline code anywhere in your document:
+`r wikipediapreview::wp_init()`
 
-    Alternatively, if you prefer to have a designated chunk:
-    ```{r wp-init, results='asis', echo=FALSE}
-    library(wikipediapreview)
-    wp_init()
-    ```")
+Alternatively, if you prefer to have a designated chunk:
+```{r wp-init, results='asis', echo=FALSE}
+library(wikipediapreview)
+wp_init()
+```")
 }
 
 script_js <- function() {

@@ -10,6 +10,8 @@ Description: Facilitates the use of Wikipedia Preview
   websites for showing a popup card with a short summary from Wikipedia when a
   reader hovers over a link to a Wikipedia article (on a desktop) or taps a link
   (on a mobile device).
+URL: https://github.com/bearloga/wikipediapreview-r
+BugReports: https://github.com/bearloga/wikipediapreview-r/issues
 License: MIT + file LICENSE
 Suggests: 
     blogdown,
