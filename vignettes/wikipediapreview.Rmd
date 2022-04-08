@@ -1,0 +1,110 @@
+---
+title: "Getting started with Wikipedia Preview"
+output: rmarkdown::html_vignette
+vignette: >
+    %\VignetteIndexEntry{Getting started with Wikipedia Preview}
+    %\VignetteEngine{knitr::rmarkdown}
+    %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Setup
+
+Initialize Wikipedia Preview by including the following chunk in your R Markdown document:
+
+````{verbatim}
+`r wikipediapreview::wp_init()`
+````
+
+`r wikipediapreview::wp_init()`
+
+## Usage
+
+The library automatically detects Wikipedia links.
+
+**Source**:
+
+````{verbatim}
+Sampling via [MCMC](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo)
+````
+
+**Output**:
+
+Sampling via [MCMC](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo)
+
+----
+
+You can also make those links stand out and appear different from non-Wikipedia links using the built-in style:
+
+**Source**:
+
+````{verbatim}
+[Stan](https://mc-stan.org/) samples via
+[HMC](https://en.wikipedia.org/wiki/Hamiltonian_Monte_Carlo){.wiki}
+````
+
+**Output**:
+
+[Stan](https://mc-stan.org/) samples via
+[HMC](https://en.wikipedia.org/wiki/Hamiltonian_Monte_Carlo){.wiki}
+
+----
+
+Wikipedia Preview works with all the language editions of Wikipedia.
+
+**Source**:
+
+````{verbatim}
+At the time of writing this vignette the article on
+[Bayesian inference](https://en.wikipedia.org/wiki/Bayesian_inference){.wiki}
+is available in 30 languages, including:
+
+- Arabic: [استدلال بايزي](https://ar.wikipedia.org/wiki/%D8%A7%D8%B3%D8%AA%D8%AF%D9%84%D8%A7%D9%84_%D8%A8%D8%A7%D9%8A%D8%B2%D9%8A){.wiki}
+- French: [Inférence bayésienne](https://fr.wikipedia.org/wiki/Inf%C3%A9rence_bay%C3%A9sienne){.wiki}
+- Japanese: [ベイズ推定](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%A4%E3%82%BA%E6%8E%A8%E5%AE%9A){.wiki}
+````
+
+**Output**:
+
+At the time of writing this vignette the article on [Bayesian inference](https://en.wikipedia.org/wiki/Bayesian_inference){.wiki} is available in 30 languages, including:
+
+- Arabic: [استدلال بايزي](https://ar.wikipedia.org/wiki/%D8%A7%D8%B3%D8%AA%D8%AF%D9%84%D8%A7%D9%84_%D8%A8%D8%A7%D9%8A%D8%B2%D9%8A){.wiki}
+- French: [Inférence bayésienne](https://fr.wikipedia.org/wiki/Inf%C3%A9rence_bay%C3%A9sienne){.wiki}
+- Japanese: [ベイズ推定](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%A4%E3%82%BA%E6%8E%A8%E5%AE%9A){.wiki}
+
+## Alternative style
+
+The default styling is the one provided and used by Wikimedia's [Inuka team](https://www.mediawiki.org/wiki/Inuka_team) which developed Wikipedia Preview. The author of this package prefers a different styling and has made it available via the `use_alt_style` flag when initializing:
+
+````{verbatim}
+`r wp_init(use_alt_style = TRUE)`
+````
+
+```{css, echo=FALSE}
+a.wiki-alt {
+    text-decoration: none;
+    border-bottom: 1px dotted #0645ad;
+}
+.wiki-alt::after {
+    font-family: serif;
+    content: " W";
+    vertical-align: super;
+    font-size: 6pt;
+}
+```
+
+Wikipedia links will be marked with a W that looks similar to the [Wikipedia logo](https://en.wikipedia.org/wiki/Wikipedia_logo){.wiki-alt}.
+
+## Linking
+
+By default `wp_init()` will embed the JavaScript code in the page. The Wikipedia Preview JavaScript library is available via a [CDN](https://en.wikipedia.org/wiki/Content_delivery_network){.wiki} -- specifically [unpkg](https://unpkg.com/browse/wikipedia-preview@latest/dist/wikipedia-preview.production.js). To use that instead of embedding for bandwidth and performance benefits:
+
+````{verbatim}
+`r wp_init(use_unpkg = TRUE)`
+````

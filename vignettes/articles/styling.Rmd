@@ -1,0 +1,59 @@
+---
+title: "Custom link styles"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+In getting started you saw what the built-in styling looks like (both the default and the alternative). In this article you'll see how to disable the built-in styling and specify your own.
+
+## Setup
+
+Initialize Wikipedia Preview *without styles* by including the following inline code anywhere in your R Markdown document:
+
+````{verbatim}
+`r wikipediapreview::wp_init(with_styles = FALSE)`
+````
+
+`r wikipediapreview::wp_init(with_styles = FALSE)`
+
+**Note**: If you prefer to have a designated chunk instead of inline code, you can initialize by including the following chunk:
+
+````{verbatim}
+```{r wp-init, results='asis', echo=FALSE}
+wikipediapreview::wp_init(with_styles = FALSE)
+```
+````
+
+Then you can define your own `wiki` CSS class from scratch, rather than overriding any built-in rules:
+
+```{css}
+.wiki {
+    color: #0645ad;
+    border-bottom: 1px dashed #0645ad;
+}
+```
+
+## Example
+
+**Source**:
+
+```
+You can link to [Wikipedia](https://www.wikipedia.org/) and
+you can link to the article about
+[Wikipedia](https://en.wikipedia.org/wiki/Wikipedia){.wiki}
+```
+
+**Output**:
+
+You can link to [Wikipedia](https://www.wikipedia.org/) and
+you can link to the article about
+[Wikipedia](https://en.wikipedia.org/wiki/Wikipedia){.wiki}
+
+## Further reading
+
+To learn more about writing CSS, refer to [blogdown: Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/css.html) (2021) by Yihui Xie, Amber Thomas, Alison Presmanes Hill.
