@@ -82,7 +82,7 @@
 <div class="section level2">
 <h2 id="setup">Setup<a class="anchor" aria-label="anchor" href="#setup"></a>
 </h2>
-<p>Initialize Wikipedia Preview by including the following chunk in your R Markdown document:</p>
+<p>Initialize Wikipedia Preview by including the following inline code anywhere in your R Markdown document:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1"></a>`r wikipediapreview::wp_init()`</span></code></pre></div>
 <style type="text/css">/*
  * Author: Wikimedia Foundation
@@ -121,33 +121,37 @@ e.exports=function(){"use strict";var e=Object.hasOwnProperty,i=Object.setProtot
         selector: '.wiki',
         detectLinks: true
       });
-    };</script>
+    };</script><p><strong>Note</strong>: If you prefer to have a designated chunk, initialize with the following code instead:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1"></a>```{r wp-init, results='asis', echo=FALSE}</span>
+<span id="cb2-2"><a href="#cb2-2"></a>library(wikipediapreview)</span>
+<span id="cb2-3"><a href="#cb2-3"></a>wp_init()</span>
+<span id="cb2-4"><a href="#cb2-4"></a>```</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
 <p>The library automatically detects Wikipedia links.</p>
 <p><strong>Source</strong>:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1"></a>Sampling via [MCMC](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1"></a>Sampling via [MCMC](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo)</span></code></pre></div>
 <p><strong>Output</strong>:</p>
 <p>Sampling via <a href="https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo" class="external-link">MCMC</a></p>
 <hr>
 <p>You can also make those links stand out and appear different from non-Wikipedia links using the built-in style:</p>
 <p><strong>Source</strong>:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1"></a>[Stan](https://mc-stan.org/) samples via</span>
-<span id="cb3-2"><a href="#cb3-2"></a>[HMC](https://en.wikipedia.org/wiki/Hamiltonian_Monte_Carlo){.wiki}</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1"></a>[Stan](https://mc-stan.org/) samples via</span>
+<span id="cb4-2"><a href="#cb4-2"></a>[HMC](https://en.wikipedia.org/wiki/Hamiltonian_Monte_Carlo){.wiki}</span></code></pre></div>
 <p><strong>Output</strong>:</p>
 <p><a href="https://mc-stan.org/" class="external-link">Stan</a> samples via <a href="https://en.wikipedia.org/wiki/Hamiltonian_Monte_Carlo" class="external-link wiki">HMC</a></p>
 <hr>
 <p>Wikipedia Preview works with all the language editions of Wikipedia.</p>
 <p><strong>Source</strong>:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1"></a>At the time of writing this vignette the article on</span>
-<span id="cb4-2"><a href="#cb4-2"></a>[Bayesian inference](https://en.wikipedia.org/wiki/Bayesian_inference){.wiki}</span>
-<span id="cb4-3"><a href="#cb4-3"></a>is available in 30 languages, including:</span>
-<span id="cb4-4"><a href="#cb4-4"></a></span>
-<span id="cb4-5"><a href="#cb4-5"></a>- Arabic: [استدلال بايزي](https://ar.wikipedia.org/wiki/%D8%A7%D8%B3%D8%AA%D8%AF%D9%84%D8%A7%D9%84_%D8%A8%D8%A7%D9%8A%D8%B2%D9%8A){.wiki}</span>
-<span id="cb4-6"><a href="#cb4-6"></a>- French: [Inférence bayésienne](https://fr.wikipedia.org/wiki/Inf%C3%A9rence_bay%C3%A9sienne){.wiki}</span>
-<span id="cb4-7"><a href="#cb4-7"></a>- Japanese: [ベイズ推定](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%A4%E3%82%BA%E6%8E%A8%E5%AE%9A){.wiki}</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1"></a>At the time of writing this vignette the article on</span>
+<span id="cb5-2"><a href="#cb5-2"></a>[Bayesian inference](https://en.wikipedia.org/wiki/Bayesian_inference){.wiki}</span>
+<span id="cb5-3"><a href="#cb5-3"></a>is available in 30 languages, including:</span>
+<span id="cb5-4"><a href="#cb5-4"></a></span>
+<span id="cb5-5"><a href="#cb5-5"></a>- Arabic: [استدلال بايزي](https://ar.wikipedia.org/wiki/%D8%A7%D8%B3%D8%AA%D8%AF%D9%84%D8%A7%D9%84_%D8%A8%D8%A7%D9%8A%D8%B2%D9%8A){.wiki}</span>
+<span id="cb5-6"><a href="#cb5-6"></a>- French: [Inférence bayésienne](https://fr.wikipedia.org/wiki/Inf%C3%A9rence_bay%C3%A9sienne){.wiki}</span>
+<span id="cb5-7"><a href="#cb5-7"></a>- Japanese: [ベイズ推定](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%A4%E3%82%BA%E6%8E%A8%E5%AE%9A){.wiki}</span></code></pre></div>
 <p><strong>Output</strong>:</p>
 <p>At the time of writing this vignette the article on <a href="https://en.wikipedia.org/wiki/Bayesian_inference" class="external-link wiki">Bayesian inference</a> is available in 30 languages, including:</p>
 <ul>
@@ -163,7 +167,7 @@ e.exports=function(){"use strict";var e=Object.hasOwnProperty,i=Object.setProtot
 <h2 id="alternative-style">Alternative style<a class="anchor" aria-label="anchor" href="#alternative-style"></a>
 </h2>
 <p>The default styling is the one provided and used by Wikimedia’s <a href="https://www.mediawiki.org/wiki/Inuka_team" class="external-link">Inuka team</a> which developed Wikipedia Preview. The author of this package prefers a different styling and has made it available via the <code>use_alt_style</code> flag when initializing:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1"></a>`r wp_init(use_alt_style = TRUE)`</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1"></a>`r wp_init(use_alt_style = TRUE)`</span></code></pre></div>
 <style type="text/css">
 a.wiki-alt {
     text-decoration: none;
@@ -182,7 +186,7 @@ a.wiki-alt {
 <h2 id="linking">Linking<a class="anchor" aria-label="anchor" href="#linking"></a>
 </h2>
 <p>By default <code><a href="../reference/wp_init.html">wp_init()</a></code> will embed the JavaScript code in the page. The Wikipedia Preview JavaScript library is available via a <a href="https://en.wikipedia.org/wiki/Content_delivery_network" class="external-link wiki">CDN</a> – specifically <a href="https://unpkg.com/browse/wikipedia-preview@latest/dist/wikipedia-preview.production.js" class="external-link">unpkg</a>. To use that instead of embedding for bandwidth and performance benefits:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1"></a>`r wp_init(use_unpkg = TRUE)`</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1"></a>`r wp_init(use_unpkg = TRUE)`</span></code></pre></div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
