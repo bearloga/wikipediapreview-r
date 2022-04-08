@@ -3,3 +3,7 @@
 ^LICENSE\.md$
 ^vignettes/articles$
 man/figures/demo.gif
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.github$
