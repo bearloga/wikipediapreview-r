@@ -1,0 +1,25 @@
+Package: wikipediapreview
+Title: Wikipedia Preview for R Markdown Documents
+Version: 0.1.0
+Authors@R: c(
+    person("Mikhail", "Popov", email = "mikhail@wikimedia.org", role = c("aut", "cre")),
+    person("Wikimedia Foundation", role = "cph")
+  )
+Description: Facilitates the use of Wikipedia Preview
+  <https://www.mediawiki.org/wiki/Wikipedia_Preview> in R Markdown documents and
+  websites for showing a popup card with a short summary from Wikipedia when a
+  reader hovers over a link to a Wikipedia article (on a desktop) or taps a link
+  (on a mobile device).
+License: MIT + file LICENSE
+Suggests: 
+    blogdown,
+    curl,
+    htmltools,
+    knitr (>= 1.37),
+    pkgdown,
+    rmarkdown (>= 2.7)
+Encoding: UTF-8
+Language: en
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+VignetteBuilder: knitr
