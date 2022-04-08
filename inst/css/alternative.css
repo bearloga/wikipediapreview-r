@@ -1,0 +1,15 @@
+/**
+  * Author: Mikhail Popov
+  * License: MIT
+  */
+a.wiki {
+    /* color: #0645ad; */
+    text-decoration: none;
+    border-bottom: 1px dotted #0645ad;
+}
+.wiki::after {
+    font-family: serif;
+    content: " W";
+    vertical-align: super;
+    font-size: 6pt;
+}
