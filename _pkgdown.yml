@@ -1,4 +1,6 @@
 url: https://bearloga.github.io/wikipediapreview-r/
 template:
   bootstrap: 5
-
+  bootswatch: simplex
+  bslib:
+    primary: "#0645ad"

@@ -16,13 +16,22 @@ knitr::opts_chunk$set(
 
 ## Setup
 
-Initialize Wikipedia Preview by including the following chunk in your R Markdown document:
+Initialize Wikipedia Preview by including the following inline code anywhere in your R Markdown document:
 
 ````{verbatim}
 `r wikipediapreview::wp_init()`
 ````
 
 `r wikipediapreview::wp_init()`
+
+**Note**: If you prefer to have a designated chunk, initialize with the following code instead:
+
+````{verbatim}
+```{r wp-init, results='asis', echo=FALSE}
+library(wikipediapreview)
+wp_init()
+```
+````
 
 ## Usage
 

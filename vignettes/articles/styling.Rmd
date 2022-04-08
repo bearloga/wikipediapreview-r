@@ -33,6 +33,7 @@ Then you can define your own `wiki` CSS class from scratch, rather than overridi
 
 ```{css}
 .wiki {
+    text-decoration: none;
     color: #0645ad;
     border-bottom: 1px dashed #0645ad;
 }
