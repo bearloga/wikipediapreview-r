@@ -19,7 +19,10 @@ Initialize Wikipedia Preview *without styles* by including the following inline 
 `r wikipediapreview::wp_init(with_styles = FALSE)`
 ````
 
-`r wikipediapreview::wp_init(with_styles = FALSE)`
+```{r wp-init, results='asis', echo=FALSE, message=FALSE}
+library(wikipediapreview)
+wp_init(use_unpkg = TRUE)
+```
 
 **Note**: If you prefer to have a designated chunk instead of inline code, you can initialize by including the following chunk:
 

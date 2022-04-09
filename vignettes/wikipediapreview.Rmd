@@ -22,7 +22,10 @@ Initialize Wikipedia Preview by including the following inline code anywhere in 
 `r wikipediapreview::wp_init()`
 ````
 
-`r wikipediapreview::wp_init()`
+```{r wp-init, results='asis', echo=FALSE, message=FALSE}
+library(wikipediapreview)
+wp_init(use_unpkg = TRUE)
+```
 
 **Note**: If you prefer to have a designated chunk, initialize with the following code instead:
 
@@ -92,7 +95,7 @@ At the time of writing this vignette the article on [Bayesian inference](https:/
 The default styling is the one provided and used by Wikimedia's [Inuka team](https://www.mediawiki.org/wiki/Inuka_team) which developed Wikipedia Preview. The author of this package prefers a different styling and has made it available via the `use_alt_style` flag when initializing:
 
 ````{verbatim}
-`r wp_init(use_alt_style = TRUE)`
+`r wikipediapreview::wp_init(use_alt_style = TRUE)`
 ````
 
 ```{css, echo=FALSE}
@@ -115,5 +118,5 @@ Wikipedia links will be marked with a W that looks similar to the [Wikipedia log
 By default `wp_init()` will embed the JavaScript code in the page. The Wikipedia Preview JavaScript library is available via a [CDN](https://en.wikipedia.org/wiki/Content_delivery_network){.wiki} -- specifically [unpkg](https://unpkg.com/browse/wikipedia-preview@latest/dist/wikipedia-preview.production.js). To use that instead of embedding for bandwidth and performance benefits:
 
 ````{verbatim}
-`r wp_init(use_unpkg = TRUE)`
+`r wikipediapreview::wp_init(use_unpkg = TRUE)`
 ````

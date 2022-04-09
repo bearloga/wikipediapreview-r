@@ -12,6 +12,7 @@ Facilitates the use of Wikipedia Preview <https://www.mediawiki.org/wiki/Wikiped
 Useful links:
 \itemize{
   \item \url{https://github.com/bearloga/wikipediapreview-r}
+  \item \url{https://bearloga.github.io/wikipediapreview-r/}
   \item Report bugs at \url{https://github.com/bearloga/wikipediapreview-r/issues}
 }
 

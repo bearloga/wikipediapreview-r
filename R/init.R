@@ -43,7 +43,7 @@ wp_init <- function(lang = "en", use_unpkg = FALSE, with_styles = TRUE, use_alt_
 
     if (use_unpkg) {
         script_html <- htmltools::tags$script(
-            src = "https://unpkg.com/browse/wikipedia-preview@latest/dist/wikipedia-preview.production.js",
+            src = "https://unpkg.com/wikipedia-preview@latest/dist/wikipedia-preview.production.js",
             type = "text/javascript"
         )
     } else {
