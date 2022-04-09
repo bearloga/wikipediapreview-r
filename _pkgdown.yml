@@ -4,3 +4,4 @@ template:
   bootswatch: simplex
   bslib:
     primary: "#0645ad"
+  theme: monochrome

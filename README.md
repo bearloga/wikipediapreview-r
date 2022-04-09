@@ -10,8 +10,8 @@
 | HTML Vignette/Document | ✅ Confirmed |
 | [pkgdown](https://pkgdown.r-lib.org/) article | ✅ Confirmed |
 | [distill](https://rstudio.github.io/distill/) article | ✅ Confirmed |
-| [distill](https://rstudio.github.io/distill/) blog/website | Unknown |
-| [blogdown](https://pkgs.rstudio.com/blogdown/) blog/website | Unknown |
+| [distill](https://rstudio.github.io/distill/) blog/website | Unknown (but probably works) |
+| [blogdown](https://pkgs.rstudio.com/blogdown/) blog/website | ✅ Confirmed |
 | [bookdown](https://pkgs.rstudio.com/bookdown/) website | Unknown |
 
 **NOTE**: Wikipedia Preview [standalone JS component](https://github.com/wikimedia/wikipedia-preview) can be used on any website. There is also an [official WordPress plug-in](https://wordpress.org/plugins/wikipedia-preview/).
@@ -42,7 +42,6 @@ wp_init()
 ```
 ````
 
-Links to Wikipedia articles in your R Markdown document will automatically have
-popup cards showing your readers a preview of the linked article:
+Links to Wikipedia articles in your R Markdown document will automatically have popup cards showing your readers a preview of the linked article:
 
 ![Demonstration of Wikipedia Preview on a rendered R Markdown vignette](man/figures/demo.gif)
