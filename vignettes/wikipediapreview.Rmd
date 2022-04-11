@@ -22,11 +22,6 @@ Initialize Wikipedia Preview by including the following inline code anywhere in 
 `r wikipediapreview::wp_init()`
 ````
 
-```{r wp-init, results='asis', echo=FALSE, message=FALSE}
-library(wikipediapreview)
-wp_init(use_unpkg = TRUE)
-```
-
 **Note**: If you prefer to have a designated chunk, initialize with the following code instead:
 
 ````{verbatim}
@@ -35,6 +30,10 @@ library(wikipediapreview)
 wp_init()
 ```
 ````
+
+```{r wp-init, results='asis', echo=FALSE, message=FALSE}
+wikipediapreview::wp_init()
+```
 
 ## Usage
 
