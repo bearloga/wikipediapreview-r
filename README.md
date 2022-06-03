@@ -6,13 +6,18 @@
 [Wikipedia Preview](https://www.mediawiki.org/wiki/Wikipedia_Preview) for [R Markdown](https://rmarkdown.rstudio.com/) documents.
 
 | Format/Generator | Compatibility |
-|:-----------------|:-------------:|
+|:-----------------|:--------------|
+| [blogdown](https://pkgs.rstudio.com/blogdown/) blog/website | ✅ Confirmed |
+| [bookdown](https://pkgs.rstudio.com/bookdown/) website | ❔ Unknown |
+| [distill](https://rstudio.github.io/distill/) article | ✅ Confirmed |
+| [distill](https://rstudio.github.io/distill/) blog/website | ❔ Unknown (but probably works) |
 | HTML Vignette/Document | ✅ Confirmed |
 | [pkgdown](https://pkgdown.r-lib.org/) article | ✅ Confirmed |
-| [distill](https://rstudio.github.io/distill/) article | ✅ Confirmed |
-| [distill](https://rstudio.github.io/distill/) blog/website | Unknown (but probably works) |
-| [blogdown](https://pkgs.rstudio.com/blogdown/) blog/website | ✅ Confirmed |
-| [bookdown](https://pkgs.rstudio.com/bookdown/) website | Unknown |
+| [Quarto](https://quarto.org/) HTML documents | ✅ Confirmed |
+| [Quarto](https://quarto.org/) blog/website | ✅ Confirmed |
+| [Quarto presentation](https://quarto.org/docs/presentations/revealjs/) | ✔️ Confirmed _BUT_ using alternative styling is not recommended |
+| [Reveal.js](https://github.com/rstudio/revealjs) presentation | ✔️ Confirmed _BUT_ using alternative styling is not recommended |
+| [xaringan](https://github.com/yihui/xaringan) presentation | ✔️ Confirmed _BUT_ `{.wiki}` styling does not work |
 
 **NOTE**: Wikipedia Preview [standalone JS component](https://github.com/wikimedia/wikipedia-preview) can be used on any website. There is also an [official WordPress plug-in](https://wordpress.org/plugins/wikipedia-preview/).
 
