@@ -50,3 +50,11 @@ wp_init()
 Links to Wikipedia articles in your R Markdown document will automatically have popup cards showing your readers a preview of the linked article:
 
 ![Demonstration of Wikipedia Preview on a rendered R Markdown vignette](man/figures/demo.gif)
+
+## 1.8.0
+
+This package uses version 1.8.0 of Wikipedia Preview while the latest version (as of 2024-06-23) is 1.11.0 and includes awesome improvements like multiple color schemes (night/dark mode).
+
+However, starting with 1.9.0, the maintainers of the library have been distributing a CommonJS version (`.cjs`). [Unpkg has an unresolved issue](https://github.com/mjackson/unpkg/issues/355) where it does not correctly set the content type of `.cjs` files -- it serves them as "text/plain" instead of "application/javascript" -- which sets off an "blocked due to MIME type mismatch (X-Content-Type-Options: nosniff)" error when the browser tries to load it from unpkg's servers.
+
+Until that issue is resolved, this package cannot use the latest version of Wikipedia Preview library.

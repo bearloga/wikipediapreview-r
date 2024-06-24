@@ -6,7 +6,7 @@
 \alias{wikipediapreview-package}
 \title{wikipediapreview: Wikipedia Preview for R Markdown Documents}
 \description{
-Facilitates the use of 'Wikipedia Preview' <https://www.mediawiki.org/wiki/Wikipedia_Preview> in R Markdown documents and websites for showing a popup card with a short summary from Wikipedia when a reader hovers over a link to a Wikipedia article (on a desktop) or taps a link (on a mobile device).
+Facilitates the use of 'Wikipedia Preview' \url{https://www.mediawiki.org/wiki/Wikipedia_Preview} in R Markdown documents and websites for showing a popup card with a short summary from Wikipedia when a reader hovers over a link to a Wikipedia article (on a desktop) or taps a link (on a mobile device).
 }
 \seealso{
 Useful links:
