@@ -114,7 +114,7 @@ Wikipedia links will be marked with a W that looks similar to the [Wikipedia log
 
 ## Linking
 
-By default `wp_init()` will embed the JavaScript code in the page. The Wikipedia Preview JavaScript library is available via a [CDN](https://en.wikipedia.org/wiki/Content_delivery_network){.wiki} -- specifically [unpkg](https://unpkg.com/browse/wikipedia-preview@latest/dist/wikipedia-preview.production.js). To use that instead of embedding for bandwidth and performance benefits:
+By default `wp_init()` will embed the JavaScript code in the page. The Wikipedia Preview JavaScript library is available via a [CDN](https://en.wikipedia.org/wiki/Content_delivery_network){.wiki} -- specifically [unpkg](https://unpkg.com/browse/wikipedia-preview@latest/dist/wikipedia-preview.umd.cjs). To use that instead of embedding for bandwidth and performance benefits:
 
 ````{verbatim}
 `r wikipediapreview::wp_init(use_unpkg = TRUE)`

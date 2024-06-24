@@ -11,7 +11,7 @@ wp_init()
 }
 
 script_js <- function() {
-    system.file("js", "wikipedia-preview.production.js", package = "wikipediapreview")
+    system.file("js", "wikipedia-preview.umd.cjs", package = "wikipediapreview")
 }
 
 styles_css <- function(alt = FALSE) {
@@ -43,23 +43,22 @@ wp_init <- function(lang = "en", use_unpkg = FALSE, with_styles = TRUE, use_alt_
 
     if (use_unpkg) {
         script_html <- htmltools::tags$script(
-            src = "https://unpkg.com/wikipedia-preview@latest/dist/wikipedia-preview.production.js",
-            type = "text/javascript"
+            src = "https://unpkg.com/wikipedia-preview@1.11.0/dist/wikipedia-preview.umd.cjs",
         )
     } else {
-        script_html <- htmltools::includeScript(script_js(), type = "text/javascript")
+        script_html <- htmltools::includeScript(script_js(), type = "application/javascript")
     }
 
     if (with_styles) {
         htmltools::tagList(
             htmltools::includeCSS(styles_css(use_alt_style)),
             script_html,
-            htmltools::includeScript(temporary_file, type = "text/javascript")
+            htmltools::includeScript(temporary_file, type = "application/javascript")
         )
     } else {
         htmltools::tagList(
             script_html,
-            htmltools::includeScript(temporary_file, type = "text/javascript")
+            htmltools::includeScript(temporary_file, type = "application/javascript")
         )
     }
 }
